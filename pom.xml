@@ -16,6 +16,7 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -35,7 +36,7 @@
                             <executable>java</executable>
                             <arguments>
                                 <argument>-jar</argument>
-                                <argument>${basedir}/target/AppJavaStudyProject-${project.version}.jar</argument>
+                                <argument>${basedir}/target/StudyProjectApp-${project.version}.jar</argument>
                             </arguments>
                         </configuration>
                     </execution>
