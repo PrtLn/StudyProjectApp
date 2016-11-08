@@ -1,1 +1,1 @@
-This is study project of Java Application in BrainAcademy
+This is study project of Java Desktop Application in BrainAcademy
