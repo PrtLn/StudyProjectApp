@@ -10,12 +10,12 @@ public class ViewRouter {
 
     private static ViewRouter instance;
     private static ViewFactory viewFactory = ViewFactory.getInstance();
+
     private JFrame mainFrame;
+    private boolean started;
 
     public ViewRouter() {
         mainFrame = new MainFrame();
-        mainFrame.setContentPane(viewFactory.getView(LOGIN).getContent());
-        mainFrame.setVisible(true);
     }
 
     public static ViewRouter getInstance() {
@@ -33,5 +33,13 @@ public class ViewRouter {
         prevView.getContent().setVisible(false);
         nextView.getContent().setVisible(true);
         mainFrame.setVisible(true);
+    }
+
+    public void start() {
+        if (!started) {
+            mainFrame.setContentPane(viewFactory.getView(LOGIN).getContent());
+            mainFrame.setVisible(true);
+            started = true;
+        }
     }
 }

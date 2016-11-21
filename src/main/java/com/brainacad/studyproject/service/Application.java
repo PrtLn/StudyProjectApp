@@ -12,9 +12,12 @@ public class Application {
 
     public static void main(String[] args) {
 
+        StubDataHolder.createData();
+
         EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ViewRouter.getInstance();
+                ViewRouter viewRouter = ViewRouter.getInstance();
+                viewRouter.start();
             }
         });
     }
