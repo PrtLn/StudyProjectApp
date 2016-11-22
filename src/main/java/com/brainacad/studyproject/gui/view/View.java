@@ -4,5 +4,8 @@ public enum View {
 
     LOGIN,
     USERS,
-    USER
+    USER,
+    EDIT_USER,
+    ADD_USER
+
 }

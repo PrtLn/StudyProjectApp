@@ -25,10 +25,10 @@ public class ViewRouter {
         return instance;
     }
 
-    public void switchView(View prev, View next) {
+    public void switchView(View prev, View next, Object ... params) {
         RefreshableView prevView = viewFactory.getView(prev);
         RefreshableView nextView = viewFactory.getView(next);
-        nextView.refresh();
+        nextView.refresh(params);
         mainFrame.setContentPane(nextView.getContent());
         prevView.getContent().setVisible(false);
         nextView.getContent().setVisible(true);
